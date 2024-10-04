@@ -1,0 +1,399 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/raleway-v34-latin-regular.woff2') format('woff2'); 
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/raleway-v34-latin-700.woff2') format('woff2'); 
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Bitter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/bitter-v36-latin-regular.woff2') format('woff2'); 
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Railway",sans-serif;
+}
+:root{
+    --green-clr:#17A550;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles start */
+.site-header {
+    box-shadow: 0px 1px 8px 0px #536D7A4A;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: black;
+    padding: 16px 16px 16px 30px;
+    overflow: hidden;
+    transition: all 0.4s linear;
+}
+.nav-link:nth-child(2){
+    padding-left: 16px;
+}
+.nav-link:nth-child(3)::before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/category.svg");
+    background-repeat: no-repeat;
+    background-size: 19px 17px;
+    background-position: left ;
+    left: 10px;
+    width: 19px;
+    height:17px ;
+}
+.nav-link:nth-child(4)::before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/blog.svg");
+    background-repeat: no-repeat;
+    background-size: 19px 17px;
+    background-position: left ;
+    left: 10px;
+    width: 19px;
+    height:17px ;
+}
+.nav-link:nth-child(5)::before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/rewiew.svg");
+    background-repeat: no-repeat;
+    background-size: 19px 17px;
+    background-position: left ;
+    left: 10px;
+    width: 19px;
+    height:17px ;
+}
+.nav-link:nth-child(6)::before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/guid.svg");
+    background-repeat: no-repeat;
+    background-size: 19px 17px;
+    background-position: left ;
+    left: 10px;
+    width: 19px;
+    height:17px ;
+}
+.nav-link::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: -100%;
+    bottom: 0;
+    transition: all 0.4s linear;
+}
+.nav-link:hover:after{
+    right: 0;
+    
+}
+.nav-link:hover{
+    background-color: lightgray;
+}
+.nav-btn {
+    position: relative;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: black;
+    padding: 16px 16px 16px 30px;
+}
+.nav-btn::before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/sign-up.svg");
+    background-repeat: no-repeat;
+    background-size: 19px 17px;
+    background-position: left ;
+    left: 10px;
+    width: 19px;
+    height:17px ;
+}
+/* Header styles stop */
+.site-main{
+    margin-top: 40px;
+}
+/* Hero section styles start */
+.hero-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+.hero {
+    background-color: #E3EBF1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+.hero__hero-title {
+    width: 483px;
+}
+.hero__hero-title h2{
+    font-family: "Bitter";
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 52px;
+    text-align: left;
+
+}
+.hero__hero-title p{
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #333;
+    margin-top: 22px;
+}
+.hero__hero-title p span{
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;    
+}
+.hero__hero-btn {
+    width: 161px;
+    height: 50px;
+    top: 322px;
+    gap: 0px;
+    background-color: var(--green-clr);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    font-weight: 400;    
+    margin-top: 22px;
+    transition: all 0.4s linear;
+}
+.hero__hero-btn:hover {
+    color: var(--green-clr);
+    background: white;
+    border-color: var(--green-clr);
+}
+/* Hero section styles end */
+
+/* Blog section styles start */
+.blog-section {
+    padding-bottom:100px;
+}
+.blog {
+    display: flex;
+    justify-content: space-between;
+}
+.blog-section__title{
+    font-family: "Bitter";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 52px;
+    text-align: left;
+}
+.blog-item1 {
+    width: 555px;
+}
+.blog-item1 h3 {
+    font-family: Bitter;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+    color: #1D2F38;
+}
+.blog-items div {
+    width: 555px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.blog-items div p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    color: #1D2F38;
+}
+.blog-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.view{
+    position: relative;
+    background-image: url("../images/view-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 39px 0 41px  92px;
+    border-radius: 10px;
+    margin-top: 140px;
+}
+.view h3{
+    font-family: "Bitter";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+}
+.view button{
+    width: 111px;
+    height: 52px;
+    background-color: var(--green-clr);
+    color: white;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: auto 0;
+    right: 30px;    
+    border: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.4s linear;
+}
+.view button:hover{
+    color: var(--green-clr);
+    background-color: transparent;
+    border-color: var(--green-clr);
+}
+.view::before{
+    content: '';
+    background-image: url("../images/view-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 50px ;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+}
+/* Blog section styles end */
+
+/* Review section syles start */
+.rewiew-section {
+    padding-bottom: 159px;
+}
+.rewiew-section h2 {
+    font-family: "Bitter";
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    color: #1D2F38;
+}
+.review-secion__item {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.review-secion__item div{
+    padding: 0 32px 39px 25px;
+    width: 358.5px;
+    background-color: #F7F9FA;
+    border-radius: 2px;
+}
+.review-secion__item div img{
+    margin-left: -25px;
+}
+.review-secion__item h3 {
+    font-family: "Bitter";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+    color: #1D2F38;
+}   
+.review-secion__item p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #1D2F38;    
+    margin-top: 10px;
+}
+/* Review section syles end */
+
+/* Sign Up section styles start */
+.signup-section {
+    padding-bottom: 100px;
+}
+.signup-section__item {
+    background-image: url("../images/new-setler-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 50px 50px 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+input{
+    width: 500px;
+    height: 50px;
+    outline: none;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+form h2{
+    font-family: "Bitter";
+    font-weight: 400;
+}
+.submit-btn {
+    width: 82px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #FFC728;
+    border: 2px solid transparent;
+    color: black;
+}
+.submit-btn:hover{
+    background-color: white;
+    border-color: #FFC728;
+    color: #FFC728;
+}
+/* Sign Up section styles end */
